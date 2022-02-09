@@ -1,0 +1,13 @@
+<div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+  <div class="card-header"><%= @sticky_note.title %></div>
+  <div class="card-body">
+    <%# <h5 class="card-title">Warning card title</h5> %>
+    <p class="card-text"><%= @sticky_note.body %></p>
+  </div>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_sticky_note_path(@sticky_note), class: "btn btn-primary btn-sm" %> 
+<%= link_to 'Back', sticky_notes_path, class: "btn btn-primary btn-sm" %>
