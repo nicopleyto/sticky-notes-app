@@ -1,3 +1,9 @@
+<% if notice %>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<%end%>
+
 <div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
   <div class="card-header"><%= @sticky_note.title %></div>
   <div class="card-body">
@@ -5,8 +11,6 @@
     <p class="card-text"><%= @sticky_note.body %></p>
   </div>
 </div>
-
-<p id="notice"><%= notice %></p>
 
 
 <%= link_to 'Edit', edit_sticky_note_path(@sticky_note), class: "btn btn-primary btn-sm" %> 

@@ -1,15 +1,17 @@
 <%= form_with(model: sticky_note) do |form| %>
   <% if sticky_note.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(sticky_note.errors.count, "error") %> prohibited this sticky_note from being saved:</h2>
-
       <ul>
         <% sticky_note.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <div><%= error.full_message %></div>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         <% end %>
       </ul>
     </div>
   <% end %>
+
 <div class="card text-dark bg-warning mb-3 row justify-content-center" style="max-width: 18rem;">
   <br/>
   <div class="field form-group">
