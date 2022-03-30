@@ -3,19 +3,19 @@ class StickyNotesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @sticky_notes = StickyNote.all
+    @sticky_notes = current_user.sticky_notes
   end
 
   def show; end
 
   def new
-    @sticky_note = StickyNote.new
+    @sticky_note = current_user.sticky_notes.new
   end
 
   def edit; end
 
   def create
-    @sticky_note = StickyNote.new(sticky_note_params)
+    @sticky_note = current_user.sticky_notes.build(sticky_note_params)
 
     if @sticky_note.save
       redirect_to sticky_note_url(@sticky_note), notice: "Sticky note was successfully created."
@@ -40,7 +40,7 @@ class StickyNotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sticky_note
-      @sticky_note = StickyNote.find(params[:id])
+      @sticky_note = current_user.sticky_notes.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
