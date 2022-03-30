@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :sticky_notes
   get 'home/about'
   # root 'home#index'
