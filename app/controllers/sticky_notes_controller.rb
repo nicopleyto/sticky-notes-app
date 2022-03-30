@@ -1,5 +1,6 @@
 class StickyNotesController < ApplicationController
   before_action :set_sticky_note, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   def index
     @sticky_notes = StickyNote.all
