@@ -5,14 +5,19 @@
             <%=link_to sticky_note, :class => "remove-underline link-dark" do%>
             <div class="card text-dark bg-warning mb-3 h-100" style="max-width: 18rem;">
                 <h5 class="card-header"><%= sticky_note.title %></h5>
+
                 <div class="card-body">
                     <small class="card-text"><%= sticky_note.body %></small>
                 </div>
-                
-                <div class="card-footer bg-transparent">
-                    <%#= link_to 'Show', sticky_note, class:"btn btn-outline-primary btn-sm" %>
-                    <%= link_to 'Edit', edit_sticky_note_path(sticky_note), class:"btn btn-outline-primary btn-sm" %>
-                    <%= link_to 'Destroy', sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %>
+
+                <div class = "d-flex justify-content-between">
+                    <%= link_to edit_sticky_note_path(sticky_note), :class => "d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" do%>
+                        <i class = "bi bi-pencil-square remove-underline link-dark"></i>
+                    <%end%>
+
+                    <%= link_to sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, :class => "d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" do%>
+                        <i class = "bi bi-trash-fill remove-underline link-dark"></i>
+                    <%end%>
                 </div>
             </div>
             <%end%>

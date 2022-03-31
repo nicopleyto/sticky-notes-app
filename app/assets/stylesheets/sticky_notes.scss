@@ -1,10 +1,8 @@
 // Place all the styles related to the sticky_notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.hide {
-    display: none;
-}
-
-.display:hover + .hide {
-    display: block;
+.custom-hover:hover {
+    border-bottom: 2px solid;
+    border-color: #343a40;
+    margin-bottom: -2px;
 }
