@@ -3,19 +3,15 @@
     <% @sticky_notes.each do |sticky_note| %>
         <div class="gallery-item">
         <%#col%>
-
-            <div class="card text-dark bg-warning h-100" style="max-width: 18rem;">
-                <h5 class="card-header"><%= sticky_note.title %></h5>
-                <div class="card-body">
-                    <small class="card-text"><%= sticky_note.body %></small>
+            <%=link_to public_sticky_note_path(sticky_note), :class => "remove-underline" do%>
+                <div class="card text-dark bg-warning h-100" style="max-width: 18rem;">
+                    <h5 class="card-header"><%= sticky_note.title %></h5>
+                    <div class="card-body">
+                        <small class="card-text"><%= sticky_note.body %></small>
+                    </div>
                 </div>
-                
-                <%# <div class="card-footer bg-transparent"> %>
-                    <%#= link_to 'Show', sticky_note, class:"btn btn-outline-primary btn-sm" %>
-                    <%#= link_to 'Edit', edit_sticky_note_path(sticky_note), class:"btn btn-outline-primary btn-sm" %>
-                    <%#= link_to 'Destroy', sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %>
-                <%# </div> %>
-            </div>
+            <%end%>
+
 
         </div>
     <% end %>
