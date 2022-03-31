@@ -1,18 +1,20 @@
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="gallery-container">
+<%# row row-cols-1 row-cols-md-3 g-4 %>
     <% @sticky_notes.each do |sticky_note| %>
-        <div class="col">
+        <div class="gallery-item">
+        <%#col%>
 
-            <div class="card text-dark bg-warning mb-3 h-100" style="max-width: 18rem;">
+            <div class="card text-dark bg-warning h-100" style="max-width: 18rem;">
                 <h5 class="card-header"><%= sticky_note.title %></h5>
                 <div class="card-body">
                     <small class="card-text"><%= sticky_note.body %></small>
                 </div>
                 
-                <div class="card-footer bg-transparent">
-                    <%= link_to 'Show', sticky_note, class:"btn btn-outline-primary btn-sm" %>
-                    <%= link_to 'Edit', edit_sticky_note_path(sticky_note), class:"btn btn-outline-primary btn-sm" %>
-                    <%= link_to 'Destroy', sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %>
-                </div>
+                <%# <div class="card-footer bg-transparent"> %>
+                    <%#= link_to 'Show', sticky_note, class:"btn btn-outline-primary btn-sm" %>
+                    <%#= link_to 'Edit', edit_sticky_note_path(sticky_note), class:"btn btn-outline-primary btn-sm" %>
+                    <%#= link_to 'Destroy', sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger btn-sm" %>
+                <%# </div> %>
             </div>
 
         </div>

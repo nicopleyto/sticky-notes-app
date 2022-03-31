@@ -9,7 +9,7 @@ class StickyNotesController < ApplicationController
   def show; end
 
   def new
-    @sticky_note = current_user.sticky_notes.new
+    @sticky_note = current_user.sticky_notes.build
   end
 
   def edit; end
