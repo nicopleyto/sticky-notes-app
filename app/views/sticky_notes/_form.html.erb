@@ -13,19 +13,21 @@
   <% end %>
 <% end %>
 
-<div class="card text-dark bg-warning mb-3 row justify-content-center" style="max-width: 18rem;">
+<div class="card text-dark bg-warning row justify-content-center mx-auto py-3" style="max-width: 18rem;">
   <br/>
   <div class="field form-group">
     <%= form.text_field :title, class:"form-control", placeholder:"Title" %>
   </div>
   <div class="field form-group">
-    <%= form.text_area :body, class:"form-control", placeholder:"Body"  %>
+    <%= form.text_area :body, class:"form-control", placeholder:"Body", :rows => "5"  %>
   </div>
   <br/>
+  <div class="actions">
+    <%= form.submit class: "btn btn-success btn-sm"%>
+  </div>
+
+  <%= link_to 'Back', sticky_notes_path, class: "btn btn-primary btn-sm"%>
 </div>
 
-<div class="actions">
-  <%= form.submit class: "btn btn-success btn-sm"%>
-</div>
 
 <% end %>

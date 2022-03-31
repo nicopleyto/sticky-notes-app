@@ -1,11 +1,18 @@
-<div class="card text-dark bg-warning mb-3" style="max-width: 18rem;">
+<div class="card text-dark bg-warning mx-auto" style="max-width: 18rem;">
   <h5 class="card-header"><%= @sticky_note.title %></h5>
+
   <div class="card-body">
-    <%# <h5 class="card-title">Warning card title</h5> %>
     <small class="card-text"><%= @sticky_note.body %></small>
   </div>
+
+  <div class = "d-flex justify-content-between">
+    <%= link_to edit_sticky_note_path(@sticky_note), :class => "d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" do%>
+      <i class = "bi bi-pencil-square remove-underline link-dark"></i>
+    <%end%>
+
+    <%= link_to @sticky_note, method: :delete, data: { confirm: 'Are you sure?' }, :class => "d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" do%>
+      <i class = "bi bi-trash-fill remove-underline link-dark"></i>
+    <%end%>
+  </div>
+
 </div>
-
-
-<%= link_to 'Edit', edit_sticky_note_path(@sticky_note), class: "btn btn-primary btn-sm" %> 
-<%= link_to 'Back', sticky_notes_path, class: "btn btn-primary btn-sm" %>
