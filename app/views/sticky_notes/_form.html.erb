@@ -15,18 +15,16 @@
 
 <div class="card text-dark bg-warning row justify-content-center mx-auto py-3" style="max-width: 18rem;">
   <br/>
-  <div class="field form-group">
-    <%= form.text_field :title, class:"form-control", placeholder:"Title" %>
+  <div class="field form-group my-1">
+    <%= form.text_field :title, class:"form-control", placeholder:"Title", :maxlength => 55 %>
   </div>
-  <div class="field form-group">
-    <%= form.text_area :body, class:"form-control", placeholder:"Body", :rows => "5"  %>
+  <div class="field form-group my-1">
+    <%= form.text_area :body, class:"form-control", placeholder:"Body", :rows => "5", :maxlength => 280  %>
   </div>
   <br/>
 
   <div class = "d-flex justify-content-between">
     <%= form.submit :class => "btn d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" %>
-      <%# <i class = "bi bi-pencil-square remove-underline link-dark"></i>
-    <%end%>
 
     <%= link_to sticky_notes_path, :class => "btn d-flex flex-fill justify-content-center align-items-center py-2 custom-hover" do%>
       <i class = "bi bi-x-circle-fill remove-underline link-dark"></i>
