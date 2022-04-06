@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple online sticky note app that allows the user to create a sticky note, write anything, and post it on the main page. This app was made with simple CRUD (create, read, update, delete) functionality, which means each note created can also be edited or destroyed. 
 
-Things you may want to cover:
+Feel free to add a sticky note of your own!
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+© 2022 Nico Pleyto 
